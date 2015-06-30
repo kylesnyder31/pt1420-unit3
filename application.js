@@ -27,6 +27,10 @@ function addtodolist(){
 	var newToDo = document.getElementById("todonew");
 	
 	tmpItem = newToDo.value;
+	if(tmpItem=== ""){
+		alert("you didn't put a valid entry");
+		return;
+	}
 	
 	toDoList.push(tmpItem);
 	
