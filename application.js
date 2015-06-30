@@ -1,5 +1,12 @@
 var toDoList = [];
 
+function loadToDolist(){
+	if(localStorage.todolist){
+	toDoList = JSON.parse(localStorage.todolist);
+	changeDisplay();
+	}
+}
+
 function changeDisplay(){
 	var list = document.getElementById("todolist");
 	list.innerHTML = "";
@@ -8,6 +15,7 @@ function changeDisplay(){
 	' (<a href="#" onclick="javascript:removeToDo(' + i +')">x</a>)' +
 	'</div>';
 	}
+	localStorage.toDoList = JSON.stringify(toDoList);
 }
 	
 function removeToDo(itemToRemove){
