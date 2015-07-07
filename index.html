@@ -1,14 +1,34 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>ToDo List App</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <body onload="javascript:loadToDoList()">
-	<div id="listform">
-		<input id="todonew" type="text"></input>
-		<button type="button" onclick="javascript:addtodolist()">add</button>
-	</div>	
-	<div id="todolist"></div>
-	<script src="application.js"></script>
+    <nav class="navbar navbar-inverse navbar-fixtop">
+        <div class="container">
+        <div class="navbar-header">
+            <a herf="#" class="navbar-brand">I figured it out TASK LIST</a>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div style="padding-top:10px">
+            <div id="listform"> 
+                <label class="input-group">
+                    <input class="form-control" placeholder="Add New Task" id="todonew" type="text"></input>
+                    <span class= "input-group-btn">
+                        <button class= "btn btn-primary" type="button" onclick="javascript:addtodolist()">add</button>
+                    </span>
+                </label>
+            </div>
+            <div class="container">
+                <ul id="todolist" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/application.js"></script>
 </body>
 </html>
